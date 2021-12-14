@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Câu 1 - Load JS</title>
+    <style>
+        button {
+            background-color: cornflowerblue;
+            color: cornsilk;
+        }
+        button:hover{
+            background-color: darkgrey;
+        }
+    </style>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <script>
+        var userInfo = {
+            "id": "888888",
+            "first_name": "Quốc Khánh",
+            "gender": "Male",
+            "last_name": "Mai",
+            "birthday": "21/12/2000",
+            "name": "Quốc Khánh Mai",
+            "username": "quockhanh"
+        }
+    </script>
+
+</head>
+<body>
+    <div style="margin: 20px; text-align: center;">
+        <button type="button" onclick="loadJSON();">Load Data</button>
+    </div>
+    <table class="table table-striped" style="text-align: center;">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Birthday</th>
+        </tr>
+        <tr>
+            <td id="id"></td>
+            <td id="name"></td>
+            <td id="gender"></td>
+            <td id="birthday"></td>
+        </tr>
+    </table>
+    <script>
+        function loadJSON() {
+            var a = document.getElementById("id");
+            a.innerHTML = userInfo.id;
+            var b = document.getElementById("name");
+            b.innerHTML = userInfo.first_name;
+            var c = document.getElementById("gender");
+            c.innerHTML = userInfo.gender;
+            var d = document.getElementById("birthday");
+            d.innerHTML = userInfo.birthday;
+        }
+    </script>
+</body>
+
+</html>
